@@ -1,3 +1,30 @@
 body {
+  min-width: 375px;
+  max-width: 1440px;
+  min-height: 100vh;
   font-family: Inter, sans-serif;
+  padding-inline: 1rem;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.7rem;
+}
+.navigation-list {
+  display: flex;
+}
+
+/* Hero section */
+
+/* Hides Navigation at smaller screens */
+.nav-hidden {
+  display: none;
+}
+
+/* Shows navigation at bigger screens */
+.nav-show {
+  display: block;
 }
