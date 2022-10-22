@@ -1,3 +1,8 @@
+/* Style Root */
+:root {
+  --orange-color: #f15d51;
+}
+
 body {
   min-width: 375px;
   max-width: 1440px;
@@ -18,7 +23,29 @@ nav {
 }
 
 /* Hero section */
+.hero-section {
+  margin-bottom: 1.5rem;
+}
 
+/* Read more section */
+.read-more-section {
+  margin-bottom: ;
+}
+.read-more-section h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+.read-more-section p {
+  margin-block: 1.5rem;
+}
+.read-more-section button {
+  padding: 1rem 2.1rem;
+  background-color: var(--orange-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #fff;
+}
 /* Hides Navigation at smaller screens */
 .nav-hidden {
   display: none;
