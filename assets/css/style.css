@@ -1,6 +1,10 @@
 /* Style Root */
 :root {
   --orange-color: #f15d51;
+  --dark-blue-color: #00001a;
+  --yellow-color: #e9aa52;
+  --silver-color: #c5c6ce;
+  --gray-color: #5e607a;
 }
 
 body {
@@ -8,6 +12,7 @@ body {
   max-width: 1440px;
   min-height: 100vh;
   font-family: Inter, sans-serif;
+  font-weight: normal;
   padding-inline: 1rem;
 }
 
@@ -23,14 +28,15 @@ nav {
 }
 
 /* Hero section */
-.hero-section {
+#hero-section {
   margin-bottom: 1.5rem;
 }
 
 /* Read more section */
-.read-more-section {
-  margin-bottom: ;
+#read-more-section {
+  margin-bottom: 4.3rem;
 }
+
 .read-more-section h1 {
   font-size: 40px;
   font-weight: 800;
@@ -46,11 +52,76 @@ nav {
   letter-spacing: 0.25rem;
   color: #fff;
 }
+
+/* New section */
+#new-section {
+  background-color: var(--dark-blue-color);
+  color: #fff;
+  margin-bottom: 4.3rem;
+  padding-inline: 1.2rem;
+}
+
+.new-section h2 {
+  color: var(--yellow-color);
+  font-size: 32px;
+  font-weight: 800;
+  padding-top: 1.2rem;
+}
+
+.new-section .text-container {
+  border-bottom: 1px solid var(--gray-color);
+  padding-block: 2rem;
+}
+.new-section .text-container h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+}
+.new-section .text-container p {
+  color: var(--silver-color);
+}
+
+/* Categories section */
+#categories-section {
+  margin-bottom: 4.3rem;
+}
+
+.categories-section .category {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.categories-section .category > img {
+  height: 130px;
+}
+
+.categories-section .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 1.4rem;
+}
+.categories-section .text-container span {
+  color: var(--silver-color);
+  font-size: 32px;
+  font-weight: 800;
+}
+.categories-section .text-container h4 {
+  color: var(--dark-blue-color);
+  font-size: 18px;
+  font-weight: 900;
+}
+.categories-section .text-container p {
+  color: var(--gray-color);
+}
+
+
+
+
 /* Hides Navigation at smaller screens */
 .nav-hidden {
   display: none;
 }
-
 /* Shows navigation at bigger screens */
 .nav-show {
   display: block;
