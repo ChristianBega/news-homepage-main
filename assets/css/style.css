@@ -14,21 +14,49 @@ body {
   font-weight: normal;
   padding-inline: 1rem;
 }
+main {
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 /* Navigation */
 nav {
+  max-width: 1110px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-block: 1.7rem;
 }
+
 .navigation-list {
-  display: flex;
+  width: 430px;
+  justify-content: space-between;
+}
+.navigation-list li a {
+  color: var(--gray-color);
+}
+.navigation-list li a:hover {
+  color: var(--orange-color);
+}
+/* Hides navigation at smaller screens */
+.nav-hidden {
+  display: none !important;
+}
+/* Shows hamburger menu at small screens */
+.hamburger-show {
+  display: block;
 }
 
 /* Hero section */
 #hero-section {
   margin-bottom: 1.5rem;
+  background: url(/assets/images/image-web-3-mobile.jpg);
+  height: 300px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Read more section */
@@ -50,6 +78,9 @@ nav {
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   color: #fff;
+}
+.read-more-section button:hover {
+  background-color: var(--dark-blue-color);
 }
 
 /* New section */
@@ -75,6 +106,10 @@ nav {
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 0.8rem;
+}
+.new-section .text-container h3:hover {
+  color: var(--yellow-color);
+  cursor: pointer;
 }
 .new-section .text-container p {
   color: var(--silver-color);
@@ -110,54 +145,99 @@ nav {
   font-size: 18px;
   font-weight: 900;
 }
+.categories-section .text-container h4:hover {
+  color: var(--orange-color);
+  cursor: pointer;
+}
 .categories-section .text-container p {
   color: var(--gray-color);
 }
 
-/* Tablet */
-@media screen and (min-width: 30.0625px) {
-  /* main {
-    max-width: 551px;
-    margin: 0 auto;
-  } */
-}
-@media screen and (min-width: 48em) {
+/* Tablet and bigger */
+
+@media screen and (min-width: 67.8rem) {
+  /* Navigation */
+  nav {
+    padding: 5.5rem 0 3rem;
+  }
+  nav .navigation-list {
+    display: flex !important;
+  }
+  /* Shows navigation at bigger screens */
+  .nav-show {
+    display: block !important;
+  }
+  /* Hides hamburger menu at bigger screens*/
+  .hamburger-hide {
+    display: none;
+  }
+  /* Main */
   main {
-    background-color: orange;
-    max-width: 1440px;
+    max-width: 1110px;
     margin: 0 auto;
   }
+
+  /* Grid */
   .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: 65px;
-    gap: 1.8rem 1.875rem;
+    gap: 2rem 1.875rem;
   }
-  .test-1 {
+  /* Grid Items */
+  #hero-section {
     grid-column: 1 / 9;
     grid-row: 1 / 5;
+    background: url(/assets/images/image-web-3-desktop.jpg);
   }
-  .read-more-seciton {
+  #read-more-section {
     grid-column: 1 / 9;
     grid-row: 5 / 9;
+    display: flex;
   }
-  .new-section {
+
+  .read-more-section h1 {
+    min-width: 350px;
+    font-size: 56px;
+    line-height: 56px;
+  }
+  .read-more-section p {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 26px;
+    padding-right: 1rem;
+  }
+  .read-more-section button {
+    max-width: 185px;
+  }
+  .read-more-section .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #new-section {
     grid-column: 9 / -1;
-    grid-row: 1 / 9;
+    grid-row: 1 / 8;
+    display: flex;
+    flex-direction: column;
+  }
+  #new-section .text-container {
+    padding-block: 2.98rem;
+  }
+  #new-section .text-container:last-child {
+    border-bottom: none;
+  }
+
+  #categories-section {
+    grid-column: 1 / -1;
+    grid-row: 8 / 10;
+    display: flex;
   }
   .categories-section {
-    grid-column: 1 / -1;
-    grid-row: 9 / 11;
-    display: flex;
-    flex-direction: ;
+    margin-bottom: 0 !important;
+    justify-content: space-between;
   }
-}
-
-/* Hides Navigation at smaller screens */
-.nav-hidden {
-  display: none;
-}
-/* Shows navigation at bigger screens */
-.nav-show {
-  display: block;
+  .categories-section .category {
+    max-width: 350px;
+  }
 }
