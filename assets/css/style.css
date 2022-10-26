@@ -190,7 +190,7 @@ nav {
   #hero-section {
     grid-column: 1 / 9;
     grid-row: 1 / 5;
-    background: url("..images/image-web-3-desktop.jpg");
+    background: url("../images/image-web-3-desktop.jpg");
   }
   #read-more-section {
     grid-column: 1 / 9;
